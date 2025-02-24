@@ -1,0 +1,155 @@
+/* Estilos Generales */
+body {
+    font-family: "Funnel Sans", sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(45deg, #39cbfb, #0b506f);
+    color: #212529;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Header */
+nav {
+    background-color: #112e40;
+    text-align: center;
+    padding: 10px 0;
+}
+
+.title {
+    color: white;
+    font-weight: 700;
+    font-size: 2rem;
+    margin: 0;
+}
+
+.subtitle {
+    color: #dfdfdf;
+    font-size: 1.3rem;
+    font-weight: 600;
+    font-style: italic;
+    margin-top: 0;
+}
+
+/* Contenedor Principal */
+.contenedor {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+    gap: 20px;
+    padding: 20px 0;
+}
+
+/* Video */
+#video {
+    width: 100%;
+    max-width: 450px;
+    border-radius: 5px;
+}
+
+/* Controles */
+.seccion-botones {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    padding: 20px;
+}
+
+.fila-abajo {
+    display: flex;
+    gap: 10px;
+}
+
+.btn_control {
+    background-color: #343a40;
+    color: white;
+    width: 50px;
+    height: 50px;
+    font-size: 18px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.btn_control:hover {
+    background-color: #0e5979;
+}
+
+/* Sección Consola */
+.seccion-consola {
+    width: 90%;
+    max-width: 1200px;
+    margin: 20px auto;
+    border-radius: 12px;
+    background: #343a40;
+    color: white;
+    font-family: monospace;
+    padding: 10px;
+    min-height: 90px;
+    max-height: 100px;
+    overflow-y: auto;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Footer */
+.footer {
+    background-color: #112e40;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    margin-top: auto;
+    width: 100%;
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+    .contenedor {
+        flex-direction: column;
+        align-items: center;
+    }
+    .footer-title {
+        font-size: 1.3rem;
+    }
+}
+
+/* Cards */
+.card {
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 10px;
+    padding: 0;
+    width: 48%;
+    backdrop-filter: blur(15px);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    text-align: center;
+}
+
+.card-body {
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    padding: 10px;
+    font-size: large;
+}
+
+.card-header {
+    font-weight: bold;
+    padding: 0.8rem 1.8rem;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    font-size: x-large;
+}
+
+.card-header.dark {
+    background: black;
+    color: #ffffff;
+}
+
+.card-header.light {
+    background: rgba(255, 255, 255, 0.9);
+    color: black;
+}

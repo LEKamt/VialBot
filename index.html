@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+
+  <!-- Preconexión a Google Fonts para mejorar la carga -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Funnel+Sans:wght@300..800&display=swap" rel="stylesheet">
+
+  <title>VialBot</title>
+  <link href="styles.css" rel="stylesheet">
+</head>
+<body>
+<nav class="text-center py-3 border-bottom">
+  <h1 class="title">VialBot</h1>
+  <h2 class="subtitle">Detector de grietas y fisuras en carreteras de asfalto</h2>
+</nav>
+
+<main class="contenedor">
+  <div class="card">
+    <div class="card-header dark">Video de la superficie de la vía</div>
+    <div class="card-body">
+      <label for="ip_camara">Escribir IP de la cámara:</label>
+      <input type="text" id="ip_camara" placeholder="xxx.xxx.x.xxx">
+      <br><br>
+      <img src="loading.gif" id="video">
+      <div id="label-container" class="contenedor_resultado">Esperando video</div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-header light">Control del robot</div>
+    <div class="card-body">
+      <label for="ip_control">Escribir IP del robot:</label>
+      <input type="text" id="ip_control" placeholder="xxx.xxx.x.xxx">
+      <br><br>
+      <h3>Controles de dirección</h3>
+      <div class="seccion-botones">
+        <button class="btn_control" id="btnW" onclick="desplazar('W')">⬆</button>
+        <div class="fila-abajo">
+          <button class="btn_control" id="btnA" onclick="desplazar('A')">⬅</button>
+          <button class="btn_control" id="btnS" onclick="desplazar('S')">⬇</button>
+          <button class="btn_control" id="btnD" onclick="desplazar('D')">⮕</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
+
+<section class="seccion-consola">
+  <div id="console-output"></div>
+</section>
+
+<footer class="footer">
+  <h2 class="footer-title">Tecnología al servicio de las vías</h2>
+  <p class="footer-text">©UTEC 2025.</p>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@2.0.0/dist/tf.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@teachablemachine/image@latest/dist/teachablemachine-image.min.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
